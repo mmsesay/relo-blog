@@ -1,24 +1,40 @@
-# README
+# relo-blog
+Relo is a fully functional blog website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Entity Relation Diagram
+![](./public/images/blog_app_erd.png) 
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby on Rails
 
-* System dependencies
+## Getting Started
 
-* Configuration
+**The project comes shipped with linters config for ruby on rails, so ensure you have Rubocop**
+**installed on your local environment**
 
-* Database creation
+- **To get a local copy of the repository please run the following commands on your terminal:**
+- **$ git clone https://github.com/mmsesay/relo-blog.git**
+- **$ cd relo-blog.**
+- **$ run `bundle install` to couple all dependacies**
+- **$ run `rails s`**
 
-* Database initialization
+👤 **Muhammad Sesay**
 
-* How to run the test suite
+- GitHub: [@mmsesay](https://github.com/mmsesay)
+- Twitter: [@DeeMaejor](https://twitter.com/DeeMaejor)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/muhammad-m-sesay)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## 🤝 Contributing
 
-* ...
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+- Microverse for the readme template
