@@ -19,6 +19,12 @@ Relo is a fully functional blog website that will show the list of posts and emp
 - **$ run `bundle install` to couple all dependacies**
 - **$ run `rails s`**
 
+- **To run the tests please run the following commands on your terminal:**
+- **$ git clone https://github.com/mmsesay/relo-blog.git**
+- **$ cd relo-blog.**
+- **$ run `bundle install` to couple all dependacies**
+- **$ run `rails spec`**
+
 👤 **Muhammad Sesay**
 
 - GitHub: [@mmsesay](https://github.com/mmsesay)
