@@ -80,5 +80,7 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Style/RedundantFetchBlock:
   Enabled: false
+Style/BlockComments:
+  Enabled: false
 Layout/LineLength:
   Enabled: false
