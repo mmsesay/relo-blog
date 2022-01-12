@@ -14,16 +14,16 @@ Relo is a fully functional blog website that will show the list of posts and emp
 **installed on your local environment**
 
 - **To get a local copy of the repository please run the following commands on your terminal:**
-- **$ git clone https://github.com/mmsesay/relo-blog.git**
-- **$ cd relo-blog.**
-- **$ run `bundle install` to couple all dependacies**
-- **$ run `rails s`**
+- `git clone https://github.com/mmsesay/relo-blog.git`
+- `cd relo-blog`
+- `bundle install` to couple all dependacies
+- `rails s` to start the server
 
 - **To run the tests please run the following commands on your terminal:**
-- **$ git clone https://github.com/mmsesay/relo-blog.git**
-- **$ cd relo-blog.**
-- **$ run `bundle install` to couple all dependacies**
-- **$ run `rails spec`**
+- `git clone https://github.com/mmsesay/relo-blog.git`
+- `cd relo-blog`
+- `bundle install` to couple all dependacies
+- `rails spec` 
 
 👤 **Muhammad Sesay**
 
