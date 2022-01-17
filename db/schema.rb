@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_13_213921) do
+ActiveRecord::Schema.define(version: 2022_01_17_193526) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
+    t.text "text"
     t.bigint "author_id"
     t.bigint "post_id"
-    t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_comments_on_author_id"
@@ -35,16 +35,14 @@ ActiveRecord::Schema.define(version: 2022_01_13_213921) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.bigint "author_id"
-    t.bigint "likes_counter_id"
-    t.bigint "comment_counter_id"
     t.string "title"
     t.text "text"
+    t.integer "comments_counter"
+    t.integer "likes_counter"
+    t.bigint "author_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_posts_on_author_id"
-    t.index ["comment_counter_id"], name: "index_posts_on_comment_counter_id"
-    t.index ["likes_counter_id"], name: "index_posts_on_likes_counter_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,4 +54,9 @@ ActiveRecord::Schema.define(version: 2022_01_13_213921) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users", column: "author_id"
+  add_foreign_key "likes", "posts"
+  add_foreign_key "likes", "users", column: "author_id"
+  add_foreign_key "posts", "users", column: "author_id"
 end
