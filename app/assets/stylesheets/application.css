@@ -90,6 +90,14 @@ body {
   margin-top: -1.4% !important;
 }
 
+.footer {
+  background-color: gray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+}
+
 /* End of custom classes */
 
 .container {
