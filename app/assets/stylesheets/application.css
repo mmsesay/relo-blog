@@ -1,13 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(255, 255, 255);
 }
 
 /* Custom classes */
 
 .flex {
   display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -46,12 +49,13 @@ body {
 
 .container {
   height: 100vh;
-  padding: 10%;
+  padding: 0 20%;
 }
 
 .horizontal-panel {
   width: 80%;
   height: 13%;
+  margin: 18px 0;
 }
 
 .card-photo {
@@ -61,7 +65,7 @@ body {
 
 .card-contents {
   margin-left: 10px;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .card-title {
