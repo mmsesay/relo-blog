@@ -1,4 +1,4 @@
-<% (1..3).each_with_index do |index| %>
+<% (1..items).each_with_index do |index| %>
   <div class="horizontal-panel flex flex-col border-black">
     <div class="px-5">
       <p class="text-md font-bold">Post #<%= index %></p>
@@ -10,5 +10,15 @@
       <p class="text-sm">Comments: x, Likes: y</p>
     </div>
   </div>
+
+  <%# post comments %>
+  <% if current_page == 'posts' %>
+    <%= render partial: "partials/commentCard", locals: { items: 5 } %>
+  <% end %>
 <% end %>
-<button class="button border-black text-md">See all posts</button>
+
+<% if current_page != 'posts' %>
+  <button class="button border-black text-md">See all posts</button>
+<% else %>
+  <button class="button border-black text-md">Pagination</button>
+<% end %>

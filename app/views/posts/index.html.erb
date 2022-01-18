@@ -1,1 +1,2 @@
-<h1>Welcome to user <%= @user_id %> post on "<%= @title %>"</h1>
+<%= render partial: "partials/userCard", locals: { items: 1 } %>
+<%= render partial: "partials/postCard", locals: { items: 2, current_page: 'posts' } %>

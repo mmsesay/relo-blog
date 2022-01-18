@@ -86,6 +86,10 @@ body {
   padding: 5px;
 }
 
+.space-y {
+  margin-top: -3% !important;
+}
+
 /* End of custom classes */
 
 .container {
