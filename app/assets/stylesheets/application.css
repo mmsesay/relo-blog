@@ -87,14 +87,14 @@ body {
 }
 
 .space-y {
-  margin-top: -3% !important;
+  margin-top: -1.4% !important;
 }
 
 /* End of custom classes */
 
 .container {
-  height: 100vh;
-  padding: 0 20%;
+  height: auto;
+  padding: 10px 20%;
 }
 
 .horizontal-panel {
