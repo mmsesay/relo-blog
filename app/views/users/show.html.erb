@@ -1,1 +1,12 @@
-<h1>Showing user <%= @id %></h1>
+<%= render partial: "partials/userCard", locals: { user: @user } %>
+<%= render partial: "partials/bioCard" %>
+
+<% @user.most_recent_posts.each do |post| %>
+  <%= render partial: "partials/postCard", locals:{ post: post } %>
+<% end %>
+
+<button class="button border-black text-md">
+  <%= link_to 'See all Post', user_posts_path(@user) %>
+</button>
+
+

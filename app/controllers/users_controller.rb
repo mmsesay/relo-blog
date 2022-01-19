@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   # GET /users
   def index
-    @title = 'Relo-blog'
+    @users = User.all
   end
 
   # GET /users/:id
   def show
-    @id = params[:id]
+    @user = User.find(params[:id])
   end
 end

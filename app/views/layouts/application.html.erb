@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ReloBlog</title>
+    <title>Relo-Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,8 @@
   </head>
 
   <body>
-    <%= yield %>
+    <section class="container flex flex-col items-center justify-center">
+      <%= yield %>
+    </section>
   </body>
 </html>
