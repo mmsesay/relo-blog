@@ -1,13 +1,11 @@
-<% (1..items).each do %>
-  <div class="horizontal-panel flex">
-    <div class="card-photo border-black">
-      <!-- @TODO: add image here later --> 
-    </div>
-    <div class="card-contents flex items-center space-between w-full border-black"> 
-      <h1 class="card-title w-auto">Username</h1>
-      <div class="card-paragraph-container h-full flex flex-end w-auto">
-        <p class="card-paragraph">Number of posts: x</p>
-      </div>
+<div class="horizontal-panel flex">
+  <div class="card-photo border-black">
+    <%= user.photo %>
+  </div>
+  <div class="card-contents flex items-center space-between w-full border-black"> 
+    <h1 class="card-title w-auto"><%= link_to user.name, user_path(user) %></h1>
+    <div class="card-paragraph-container h-full flex flex-end w-auto">
+      <p class="card-paragraph">Number of posts: <%= user.posts_counter %></p>
     </div>
   </div>
-<% end %>
+</div>

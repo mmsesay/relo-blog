@@ -1,2 +1,8 @@
-<%= render partial: "partials/userCard", locals: { items: 1 } %>
-<%= render partial: "partials/postCard", locals: { items: 2, current_page: 'posts' } %>
+<%= render partial: "partials/userCard", locals: { user: @user } %>
+
+<% @posts.each do |post| %>
+  <%= render partial: "partials/postCard", locals:{ post: post } %>
+  
+  <%# post comments %>
+  <%= render partial: "partials/commentCard", locals: { items: 5 } %>
+<% end %>

@@ -1,1 +1,3 @@
-<%= render partial: "partials/userCard", locals: { items: 5 } %>
+<% @users.each do |user| %>
+  <%= render partial: "partials/userCard",  locals: { user: user } %>
+<% end %>
