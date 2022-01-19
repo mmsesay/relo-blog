@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   end
 
   root to: "users#index"
+
+  get '/posts/new' => 'posts#new'
+  post '/posts' => 'posts#create'
 end
