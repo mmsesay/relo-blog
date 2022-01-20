@@ -1,9 +1,13 @@
 <div class="horizontal-panel space-y flex flex-col border-black">
   <div class="flex flex-col px-5">
-   <% comments.each do |comment| %>
-    <p class="text-lg">
-      Username: <%= comment.text %>
-    </p>
+    <% if comments.any? %>
+      <% comments.each do |comment| %>
+        <p class="text-lg">
+          Username: Comment: <%= comment.text %>
+        </p>
+      <% end %>
+    <% else %>
+      <p>No Comment</p>
     <% end %>
   </div>
 </div>
