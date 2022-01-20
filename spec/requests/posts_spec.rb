@@ -14,7 +14,7 @@ RSpec.describe "posts controller", type: :request do
       end
 
       it "should render the correct text in the template" do
-        expect(response.body).to include('Posts#index')
+        expect(response.body).to eq('Posts#index')
       end
     end
 

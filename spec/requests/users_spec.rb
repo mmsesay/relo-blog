@@ -14,7 +14,7 @@ RSpec.describe "users controller", type: :request do
       end
 
       it "should render the correct text in the template" do
-        expect(response.body).to include('Users#index')
+        expect(response.body).to eq('Users#index')
       end
     end
 
@@ -30,7 +30,7 @@ RSpec.describe "users controller", type: :request do
       end
 
       it "should render the correct text in the template" do
-        expect(response.body).to include('Users#show')
+        expect(response.body).to eq('Users#show')
       end
     end
   end
