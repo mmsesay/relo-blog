@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   # GET /users/:user_id/posts/:id
   def show
     @post = Post.find(params[:id])
+    @comments = Comment.where(post_id: params[:id]).where(author_id: params[:user_id]).all
   end
 
   def new
