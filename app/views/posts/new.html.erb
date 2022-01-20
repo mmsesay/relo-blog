@@ -1,5 +1,5 @@
 <h3>Enter new post</h3>
-<%= form_with model: @post, url: user_posts_url(@current_user) do |form| %>
+<%= form_with model: @post, url: user_posts_path(@current_user) do |form| %>
   Title: <%= form.text_field :title %><br />
   Text: <%= form.text_area :text %><br />
   <%= form.submit "Submit Post" %>

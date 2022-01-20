@@ -1,1 +1,4 @@
+<p class="card-title w-auto">
+  <%= link_to "Add new comment", new_user_post_comment_path(@post.author_id, @post) %>
+</p>
 <%= render partial: "partials/singlePostCard", locals: { post: @post } %>
