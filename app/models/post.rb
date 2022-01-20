@@ -5,6 +5,8 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
+  validates :title, presense: true
+
   def update_posts_counter
     author.increment!(:posts_counter)
   end
