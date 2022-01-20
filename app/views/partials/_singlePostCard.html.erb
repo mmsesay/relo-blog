@@ -2,7 +2,7 @@
   <div class="px-5">
     <div class="flex items-center space-between">
       <p class="text-md font-bold">Post #<%= post.id %> by username <%= post.author_id %></p>
-      <p class="text-sm font-bold">Comments: x, Likes: y</p>
+      <p class="text-sm font-bold">Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0 %></p>
     </div>
     <p class="text-lg">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
