@@ -9,10 +9,6 @@
   <%= form_with class: 'form border-black flex flex-col',
     model: @comment,
     url: user_post_comments_path(@comment.author_id, @comment.post_id) do |form| %>
-    <div>
-      <p class="text-lg">Your Name:</p>
-      <%= form.text_field :commenter, class: 'form-inputs w-full' %>
-    </div>
     <p class="text-lg">Comment:</p> 
     <%= form.text_area :text, class: 'form-textarea' %>
     <%= form.submit "Submit Comment", class: 'button my-5' %>
