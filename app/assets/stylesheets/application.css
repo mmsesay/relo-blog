@@ -82,7 +82,15 @@ body {
 }
 
 .mx-5 {
-  margin: 40px 50px;
+  margin: 40px 30px;
+}
+
+.mr-5 {
+  margin-right: 40px;
+}
+
+.my-5 {
+  margin: 10px 0;
 }
 
 .button {
@@ -131,4 +139,17 @@ body {
 
 .card-paragraph {
   font-size: 20px;
+}
+
+.form {
+  padding: 20px;
+}
+
+.form-inputs {
+  width: auto;
+  height: 40px;
+}
+
+.form-textarea {
+  height: 80px;
 }

@@ -1,6 +1,6 @@
-<p class="card-title w-auto">
+<p class="card-title w-auto flex">
   <a class="mx-5"><%= link_to "Back", user_posts_path(@post.author_id) %></a>
   <a class="mx-5"><%= link_to "Add new comment", new_user_post_comment_path(@post.author_id, @post) %></a>
-  <a class="mx-5"><%= button_to "Like Post", user_post_likes_path(@post.author_id, @post), method: :post %></a>
+  <%= button_to "Like Post", user_post_likes_path(@post.author_id, @post), method: :post, class:"button border-black" %>
 </p>
 <%= render partial: "partials/singlePostCard", locals: { post: @post } %>

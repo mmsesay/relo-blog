@@ -1,6 +1,5 @@
 <p class="card-title w-auto">
   <a class="mx-5"><%= link_to "Home", users_path %></a>
-  <a class="mx-5"><%= link_to "Back to Profile", user_path(@user) %></a>
 </p>
 <%= render partial: "partials/userCard", locals: { user: @user } %>
 <%= render partial: "partials/bioCard" %>
