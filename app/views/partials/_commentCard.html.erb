@@ -1,9 +1,18 @@
 <div class="horizontal-panel space-y flex flex-col border-black">
   <div class="flex flex-col px-5">
-   <% (1..items).each_with_index do |index| %>
-    <p class="text-lg">
-      Username: Comment <%= index %>
-    </p>
+    <% if comments.any? %>
+      <% comments.each do |comment| %>
+        <div class="flex items-center">
+          <p class="text-lg font-bold mr-5">
+            <%= comment.author.name %> : 
+          </p>
+          <p class="text-sm">
+            <%= comment.text %>
+          </p>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No Comment</p>
     <% end %>
   </div>
 </div>

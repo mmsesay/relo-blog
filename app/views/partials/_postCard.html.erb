@@ -6,6 +6,6 @@
     </p>
   </div>
   <div class="px-5 flex justify-end -mt-30">
-    <p class="text-sm">Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter%></p>
+    <p class="text-sm">Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0 %></p>
   </div>
 </div>

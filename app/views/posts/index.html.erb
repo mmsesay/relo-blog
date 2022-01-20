@@ -1,8 +1,12 @@
+<p class="card-title w-auto">
+  <a class="mx-5"><%= link_to "Home", users_path %></a>
+  <a class="mx-5"><%= link_to "My recent posts", user_path(@user) %></a>
+</p>
+
 <%= render partial: "partials/userCard", locals: { user: @user } %>
 
-<% @posts.each do |post| %>
+<% @user_posts.each do |post| %>
   <%= render partial: "partials/postCard", locals:{ post: post } %>
-  
-  <%# post comments %>
-  <%= render partial: "partials/commentCard", locals: { items: 5 } %>
+
+  <%= render partial: "partials/commentCard", locals: { comments: post.most_recent_comments } %>
 <% end %>

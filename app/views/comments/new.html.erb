@@ -1,0 +1,16 @@
+<div>
+  <div class="flex mx-5">
+    <p class="card-title w-auto mr-5">
+      <%= link_to "Go Back", user_posts_path(@comment.author_id) %>
+    </p>
+    <h3 class="card-title">Enter New Comment</h3>
+  </div>
+
+  <%= form_with class: 'form border-black flex flex-col',
+    model: @comment,
+    url: user_post_comments_path(@comment.author_id, @comment.post_id) do |form| %>
+    <p class="text-lg">Comment:</p> 
+    <%= form.text_area :text, class: 'form-textarea' %>
+    <%= form.submit "Submit Comment", class: 'button my-5' %>
+  <% end %>
+</div>

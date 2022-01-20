@@ -1,0 +1,22 @@
+<div>
+
+  <div class="flex mx-5">
+    <p class="card-title w-auto mr-5">
+      <%= link_to "Go Back", users_path %>
+    </p>
+    <h3 class="card-title">Enter new post</h3>
+  </div>
+
+  <%= form_with  class: 'form border-black flex flex-col w-full',
+    model: @post, url: user_posts_path(@current_user) do |form| %>
+    <div>
+      <p class="text-lg">Title:</p>
+      <%= form.text_field :title, class: 'form-inputs w-full' %>
+    </div>
+    <div>
+      <p class="text-lg">Text:</p>
+      <%= form.text_area :text, class: 'form-textarea w-full' %>
+    </div>
+    <%= form.submit "Submit Post", class: 'button my-5' %>
+  <% end %>
+</div>
