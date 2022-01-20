@@ -38,11 +38,11 @@ RSpec.describe Post, type: :model do
     end
   end
 
-  # describe 'post model methods tests' do
-  #   before(:each) { 5.times { |i| Comment.new(text: "Comment #{i}", post_id: post.id) } }
-
-  #   it 'returns the last 3 comments' do
-  #     expect(post.recent_comments).to eq(Comment.order(created_at: :desc).limit(3))
-  #   end
-  # end
+  describe 'post model methods tests' do
+    before(:each) { 5.times { |i| Comment.new(text: "Comment #{i}", author_id:user.id, post_id: post.id) } }
+    
+    it 'returns the last 3 comments' do
+      expect(post.most_recent_comments).to eq(Comment.order(created_at: :desc).limit(3))
+    end
+  end
 end
