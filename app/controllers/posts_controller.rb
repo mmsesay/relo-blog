@@ -12,17 +12,18 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @current_user = current_user
   end
 
   def create
-    @current_user = current_user
-    @post = @current_user.posts.new(post_params)
+    # @current_user = current_user
+    @post = current_user.posts.new(post_params)
 
     if @post.save
       flash[:notice] = "Post created"
       redirect_to user_path(@post.author_id)
     else
-      render "new"
+      render :new
     end
   end
 

@@ -1,0 +1,5 @@
+<h3>Enter New Comment</h3>
+<%= form_with model: @comment do |form| %>
+  Comment: <%= form.text_area :text %><br />
+  <%= form.submit "Submit Comment" %>
+<% end %>
