@@ -14,7 +14,7 @@ RSpec.describe "users controller", type: :request do
       end
 
       it "should render the correct text in the template" do
-        expect(response.body).to include('Hello users welcome to Relo-blog')
+        expect(response.body).to include('Users#index')
       end
     end
 
@@ -30,7 +30,7 @@ RSpec.describe "users controller", type: :request do
       end
 
       it "should render the correct text in the template" do
-        expect(response.body).to include('Showing user 1')
+        expect(response.body).to include('Users#show')
       end
     end
   end

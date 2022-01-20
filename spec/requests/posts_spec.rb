@@ -14,7 +14,7 @@ RSpec.describe "posts controller", type: :request do
       end
 
       it "should render the correct text in the template" do
-        expect(response.body).to include('Welcome to user 1 post on "Relo-blog"')
+        expect(response.body).to include('Posts#index')
       end
     end
 
@@ -30,7 +30,7 @@ RSpec.describe "posts controller", type: :request do
       end
 
       it "should render the correct text in the template" do
-        expect(response.body).to include('Showing user 1 post 3')
+        expect(response.body).to include('Posts#show')
       end
     end
   end
