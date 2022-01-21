@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /user/:user_id/posts
   def index
     @user = User.find(params[:user_id])
-    @user_posts = Post.where(author_id: params[:user_id]).all
+    @posts = Post.where(author_id: params[:user_id]).all
     @comments = Comment.new
   end
 
@@ -23,6 +23,7 @@ class PostsController < ApplicationController
     @post.likes_counter  =  0;
 
     if @post.save
+      p @post
       flash[:notice] = "New post created"
       redirect_to user_path(@post.author_id)
     else
