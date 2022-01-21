@@ -21,7 +21,8 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
 
     if @post.save
-      flash[:notice] = "Post created"
+      p @post
+      flash[:notice] = "New post created"
       redirect_to user_path(@post.author_id)
     else
       render :new
@@ -32,5 +33,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :text)
+  end
+
+  def reference_params
+    @post.author_id = params[:user_id]
   end
 end

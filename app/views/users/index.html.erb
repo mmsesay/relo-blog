@@ -1,4 +1,9 @@
 <p class="card-title w-auto"><%= link_to "Add new post", new_user_post_path(@current_user) %></p>
+
+<% flash.each do |name, msg| %>
+  <p class="card-title"> <%= msg %> </p>
+<% end %>
+
 <% @users.each do |user| %>
   <%= render partial: "partials/userCard",  locals: { user: user } %>
 <% end %>

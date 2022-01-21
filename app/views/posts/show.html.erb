@@ -3,4 +3,9 @@
   <a class="mx-5"><%= link_to "Add new comment", new_user_post_comment_path(@post.author_id, @post) %></a>
   <%= button_to "Like Post", user_post_likes_path(@post.author_id, @post), method: :post, class:"button border-black" %>
 </p>
+
+<% flash.each do |name, msg| %>
+  <p class="card-title"> <%= msg %> </p>
+<% end %>
+
 <%= render partial: "partials/singlePostCard", locals: { post: @post } %>
