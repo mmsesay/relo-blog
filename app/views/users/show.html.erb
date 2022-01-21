@@ -1,6 +1,12 @@
 <p class="card-title w-auto">
   <a class="mx-5"><%= link_to "Home", users_path %></a>
+  <a class="mx-5"><%= link_to "Add new post", new_user_post_path(@user) %></a>
 </p>
+
+<% flash.each do |name, msg| %>
+  <p class="card-title"> <%= msg %> </p>
+<% end %>
+
 <%= render partial: "partials/userCard", locals: { user: @user } %>
 <%= render partial: "partials/bioCard", locals: { user: @user } %>
 

@@ -5,7 +5,7 @@
 
 <%= render partial: "partials/userCard", locals: { user: @user } %>
 
-<% @user_posts.each do |post| %>
+<% @posts.each do |post| %>
   <%= render partial: "partials/postCard", locals:{ post: post } %>
 
   <%= render partial: "partials/commentCard", locals: { comments: post.most_recent_comments } %>
