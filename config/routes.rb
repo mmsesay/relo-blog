@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   end
 
   root to: "users#index"
-  post '/users/:user_id/posts' => 'posts#create', as: 'new_post'
 end

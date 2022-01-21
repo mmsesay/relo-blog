@@ -19,9 +19,10 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(post_params)
+    @post.comments_counter  =  0;
+    @post.likes_counter  =  0;
 
     if @post.save
-      p @post
       flash[:notice] = "New post created"
       redirect_to user_path(@post.author_id)
     else

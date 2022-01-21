@@ -6,13 +6,10 @@
     <h3 class="card-title">Enter new post</h3>
   </div>
 
-  <%= debug(@post) %>
-
   <%= form_with  class: 'form border-black flex flex-col w-full',
     model: @post,
-    url: new_user_post_path(@current_user) do |form| %>
+    url: user_posts_path(@current_user) do |form| %>
     <div>
-      <%= @current_user.id %>
       <p class="text-lg">Title:</p>
       <%= form.text_field :title, class: 'form-inputs w-full' %>
     </div>
@@ -23,5 +20,3 @@
     <%= form.submit "Submit Post", class: 'button my-5' %>
   <% end %>
 </div>
-
-<%# "/users/#{@current_user.id}/posts/new" %>
