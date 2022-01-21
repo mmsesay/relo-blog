@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  before(:each) { 
+  before(:each) do
     @user = User.new(name: 'John', bio: 'I am a content creator', photo: '', posts_counter: 0)
     @post = Post.new(title: 'Post 1', text: 'Text...', comments_counter: 0, likes_counter: 0, author_id: @user.id)
     10.times { |i| Comment.new(text: "Comment #{i}", author_id: @user.id, post_id: @post.id) }
 
     @comments = Comment.where(post_id: @post.id).where(author_id: @user.id).all
-  }
+  end
 
   describe 'user validation tests' do
     it 'validates the presence of the title' do
